@@ -9,14 +9,14 @@ document.getElementById("button-logout").addEventListener("click", logout);
 
 //------
 
-document.getElementById("transactions-list").addEventListener("submit", function(e){
+document.getElementById("transation-form").addEventListener("submit", function(e){
     e.preventDefault();
     
     const value = parseFloat(document.getElementById("value-input").value);
     const description = document.getElementById("description-input").value;
     const date = document.getElementById("date-input").value;
     const type = document.querySelector('input[name="type-input"]:checked').value;
-
+    console.log("Entrouuuuu")
     data.transactions.unshift({
         value: value, type: type, description: description, date: date        
     });
